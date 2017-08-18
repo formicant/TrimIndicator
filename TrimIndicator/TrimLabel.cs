@@ -29,21 +29,29 @@ namespace TrimIndicator
 
 		public void SetValue(float value)
 		{
-			int steps = (int)Math.Round(500 * value);
-			string text = steps != 0
-				? (steps < 0 ? "−" : "+") + Math.Abs(steps).ToString(CultureInfo.InvariantCulture)
-				: string.Empty;
+			// ReSharper disable once CompareOfFloatsByEqualityOperator
+			if(value != _lastValue)
+			{
+				int steps = (int)Math.Round(500 * value);
+				string text = steps != 0
+					? (steps < 0 ? "−" : "+") + Math.Abs(steps).ToString(CultureInfo.InvariantCulture)
+					: string.Empty;
 
-			_slider.transform.localPosition = _sliderAmplitude * GetSliderPosition(value) * _sliderDirection;
+				_slider.transform.localPosition = _sliderAmplitude * GetSliderPosition(value) * _sliderDirection;
 
-			foreach(var textMesh in _textMeshes)
-				textMesh.text = text;
+				foreach(var textMesh in _textMeshes)
+					textMesh.text = text;
+
+				_lastValue = value;
+			}
 		}
 
 		readonly Vector3 _sliderDirection;
 		readonly float _sliderAmplitude;
 		readonly GameObject _slider;
 		readonly IEnumerable<TextMeshProUGUI> _textMeshes;
+
+		float _lastValue;
 
 
 		static GameObject MakeObject(GameObject parent, Vector3 relativeLocation)
