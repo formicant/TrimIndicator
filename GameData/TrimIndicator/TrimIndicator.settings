@@ -1,0 +1,2 @@
+// Set to 'True' to show wheel motor and steer trim values
+ShowWheelTrim = False

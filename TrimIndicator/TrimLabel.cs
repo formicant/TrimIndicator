@@ -32,7 +32,7 @@ namespace TrimIndicator
 			// ReSharper disable once CompareOfFloatsByEqualityOperator
 			if(value != _lastValue)
 			{
-				int steps = (int)Math.Round(500 * value);
+				int steps = (int)Math.Round(value / Step);
 				string text = steps != 0
 					? (steps < 0 ? "−" : "+") + Math.Abs(steps).ToString(CultureInfo.InvariantCulture)
 					: string.Empty;
@@ -107,5 +107,7 @@ namespace TrimIndicator
 		const float HorizontalSliderAmplitude = 39F;
 		const float VerticalSliderAmplitude = 49F;
 		const double SliderPositionSteepness = 20;
+
+		const float Step = 0.002F;
 	}
 }
