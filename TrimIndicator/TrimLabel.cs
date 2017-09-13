@@ -66,7 +66,8 @@ namespace TrimIndicator
 		{
 			var gameObject = MakeObject(parent, relativeLocation);
 			// Just an empty text mesh. Consider replacing by something more adequate
-			gameObject.AddComponent<TextMeshProUGUI>();
+			var textMesh = gameObject.AddComponent<TextMeshProUGUI>();
+			textMesh.autoSizeTextContainer = true;
 			return gameObject;
 		}
 

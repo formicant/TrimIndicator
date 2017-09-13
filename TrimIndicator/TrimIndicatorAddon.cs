@@ -33,12 +33,8 @@ namespace TrimIndicator
 			_pitchTrimLabel?.SetValue(ctrlState?.pitchTrim ?? 0);
 			_yawTrimLabel?.SetValue(ctrlState?.yawTrim ?? 0);
 			_rollTrimLabel?.SetValue(ctrlState?.rollTrim ?? 0);
-
-			if(_showWheelTrim)
-			{
-				_wheelThrottleTrimLabel?.SetValue(ctrlState?.wheelThrottleTrim ?? 0);
-				_wheelSteerTrimLabel?.SetValue(-(ctrlState?.wheelSteerTrim ?? 0));
-			}
+			_wheelThrottleTrimLabel?.SetValue(ctrlState?.wheelThrottleTrim ?? 0);
+			_wheelSteerTrimLabel?.SetValue(-(ctrlState?.wheelSteerTrim ?? 0));
 		}
 
 		void LoadSettings()
