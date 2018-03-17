@@ -24,29 +24,22 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\GameData\TrimIndicator\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\_Lib\1.3.0 x64\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\_Lib\1.4.1 x64\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\_Lib\1.3.0 x64\UnityEngine.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\_Lib\1.4.1 x64\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\_Lib\1.3.0 x64\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\_Lib\1.4.1 x64\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -55,4 +48,7 @@
     <Compile Include="TrimLabel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)\GameData\$(ProjectName)\$(ProjectName).dll"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
