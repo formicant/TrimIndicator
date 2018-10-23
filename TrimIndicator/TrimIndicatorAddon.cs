@@ -58,6 +58,7 @@ namespace TrimIndicator
 		TrimLabel _wheelThrottleTrimLabel;
 		TrimLabel _wheelSteerTrimLabel;
 
-		static readonly string SettingsFilePath = $"{KSPUtil.ApplicationRootPath}GameData/{nameof(TrimIndicator)}/{nameof(TrimIndicator)}.settings";
+		static readonly string SettingsFilePath =
+			$"{KSPUtil.ApplicationRootPath}GameData/{nameof(TrimIndicator)}/{nameof(TrimIndicator)}.settings";
 	}
 }
