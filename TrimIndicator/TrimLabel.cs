@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using TMPro;
 using UnityEngine;
 
@@ -29,7 +28,6 @@ namespace TrimIndicator
 
 		public void SetValue(float value)
 		{
-			// ReSharper disable once CompareOfFloatsByEqualityOperator
 			if(value != _lastValue)
 			{
 				int steps = (int)Math.Round(value / Step);

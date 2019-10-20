@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TrimIndicator")]
+[assembly: AssemblyTitle(nameof(TrimIndicator))]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TrimIndicator")]
+[assembly: AssemblyProduct(nameof(TrimIndicator))]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -28,7 +28,9 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Build and Revision Numbers
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.6.0.0")]
+[assembly: AssemblyVersion("1.8.0.0")]
+
+// Use KSPAssembly to allow other DLLs to make this DLL a dependency in a 
+// non-hacky way in KSP.  Format is (AssemblyProduct, major, minor), and it 
+// does not appear to have a hard requirement to match the assembly version. 
+[assembly: KSPAssembly("TrimIndicator", 1, 8)]

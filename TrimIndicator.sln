@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrimIndicator", "TrimIndicator\TrimIndicator.csproj", "{D3EE7D46-519E-44D4-A993-6CA88FA00590}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrimIndicator", "TrimIndicator\TrimIndicator.csproj", "{507F9C0D-8B22-4386-83B8-601CF14999DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C70C8B03-CF29-4215-8E9B-9F9E6D7FB5F0}"
+	ProjectSection(SolutionItems) = preProject
+		GameData\TrimIndicator\TrimIndicator.version = GameData\TrimIndicator\TrimIndicator.version
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +16,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D3EE7D46-519E-44D4-A993-6CA88FA00590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3EE7D46-519E-44D4-A993-6CA88FA00590}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3EE7D46-519E-44D4-A993-6CA88FA00590}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3EE7D46-519E-44D4-A993-6CA88FA00590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{507F9C0D-8B22-4386-83B8-601CF14999DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{507F9C0D-8B22-4386-83B8-601CF14999DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{507F9C0D-8B22-4386-83B8-601CF14999DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{507F9C0D-8B22-4386-83B8-601CF14999DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B3B7C71-24AF-42A5-99B6-22E202E5030D}
 	EndGlobalSection
 EndGlobal
