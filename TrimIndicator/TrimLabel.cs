@@ -90,14 +90,14 @@ namespace TrimIndicator
 			(float)(Math.Atan(value * SliderPositionSteepness) / Math.Atan(SliderPositionSteepness));
 
 		static TMP_FontAsset _font;
-		static TMP_FontAsset Font => _font ?? (_font =
+		static TMP_FontAsset Font => _font ??=
 			Resources.LoadAll<TMP_FontAsset>("Fonts")
-				.FirstOrDefault(f => f.name == "Calibri SDF"));
+				.FirstOrDefault(f => f.name == "Calibri SDF");
 
 		static Material _fontMaterial;
-		static Material FontMaterial => _fontMaterial ?? (_fontMaterial =
+		static Material FontMaterial => _fontMaterial ??=
 			Resources.LoadAll<Material>("Fonts")
-				.FirstOrDefault(f => f.name == "Calibri SDF Material"));
+				.FirstOrDefault(f => f.name == "Calibri SDF Material");
 
 		static readonly Color BackgroundColor = new Color(0.235F, 0.274F, 0.310F); // #3C464F
 		static readonly Color ForegroundColor = new Color(0.827F, 0.827F, 0.827F); // #D3D3D3
