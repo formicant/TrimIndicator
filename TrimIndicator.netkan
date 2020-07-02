@@ -4,10 +4,11 @@
   "$kref"        : "#/ckan/github/formicant/TrimIndicator",
   "$vref"        : "#/ckan/ksp-avc",
   "name"         : "Trim Indicator",
-  "author"       : [ "Teilnehmer" ],
+  "author"       : "Teilnehmer",
   "abstract"     : "A minimalistic add-on displaying trim values inside the control gauges.",
   "license"      : "GPL-3.0",
   "resources"    : {
     "homepage"   : "https://forum.kerbalspaceprogram.com/index.php?/topic/164522-trim-indicator"
-  }
+  },
+  "tags"         : [ "plugin", "information" ]
 }
