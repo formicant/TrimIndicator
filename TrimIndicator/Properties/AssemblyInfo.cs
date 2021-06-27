@@ -28,9 +28,9 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.11.0.0")]
+[assembly: AssemblyVersion("1.12.0.0")]
 
 // Use KSPAssembly to allow other DLLs to make this DLL a dependency in a 
 // non-hacky way in KSP.  Format is (AssemblyProduct, major, minor), and it 
 // does not appear to have a hard requirement to match the assembly version. 
-[assembly: KSPAssembly("TrimIndicator", 1, 11)]
+[assembly: KSPAssembly("TrimIndicator", 1, 12)]
